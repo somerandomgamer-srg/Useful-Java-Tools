@@ -43,7 +43,7 @@ mvn clean install
 2. Add the dependency to your `pom.xml`:
 ```xml
 <dependency>
-	<groupId>com.srg</groupId>
+	<groupId>io.github.somerandomgamer-srg</groupId>
 	<artifactId>useful-java-tools</artifactId>
 	<version>1.0.0</version>
 </dependency>
