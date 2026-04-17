@@ -1,6 +1,6 @@
 # Useful Java Tools (UJT) &nbsp;·&nbsp; Version 1.0.0
 
-> A comprehensive, zero-dependency utility library for Java — 233 methods across 17 classes, built entirely on the standard library.
+> A comprehensive, zero-dependency utility library for Java. 233 methods across 17 classes, built entirely on the standard library.
 
 ---
 
@@ -71,8 +71,8 @@ mvn clean install
 
 **3. Import the classes you need:**
 ```java
-import UsefulJavaTools.*;          // import everything
-import UsefulJavaTools.Binary;     // or import a specific class
+import ujt.*;          // import everything
+import ujt.Binary;     // or import a specific class
 ```
 
 **4. Start using the methods in your application.**
@@ -118,7 +118,6 @@ import UsefulJavaTools.Binary;     // or import a specific class
 | ClipboardUtils   |    4    |
 |      Jvm         |    2    |
 |      Test        |    1    |
-|   SystemInfo     |    0    |
 
 ### Variables per Class
 
