@@ -13,7 +13,7 @@ package UsefulJavaTools;
 */
 public class StringUtils {
 	static {
-		Ujt.checkJavaVersion();
+		Ujt.ujtCheckJavaVersion();
 	}
 
 	/**
@@ -21,6 +21,9 @@ public class StringUtils {
 		* @return The capitalized string.
 	*/
 	public static String capitalize(String s) {
+		if (s == null || s.isEmpty()) {
+			return s;
+		}
 		return s.substring(0, 1).toUpperCase() + s.substring(1);
 	}
 
