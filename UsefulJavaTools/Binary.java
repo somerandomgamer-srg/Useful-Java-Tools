@@ -12,7 +12,7 @@ import java.util.Arrays;
 */
 public class Binary {
 	static {
-		Ujt.checkJavaVersion();
+		Ujt.ujtCheckJavaVersion();
 	}
 
 	/**
