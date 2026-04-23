@@ -1,0 +1,118 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.somerandomgamer-srg</groupId>
+  <artifactId>useful-java-tools</artifactId>
+  <version>1.0.0</version>
+  <name>Useful Java Tools</name>
+  <description>A comprehensive, zero-dependency utility library for Java. 233 methods across 18 classes, built entirely on the standard library.</description>
+  <url>https://github.com/somerandomgamer-srg/Useful-Java-Tools</url>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>somerandomgamer-srg</id>
+      <name>SRG (Some Random Gamer)</name>
+      <url>https://github.com/somerandomgamer-srg</url>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/somerandomgamer-srg/Useful-Java-Tools.git</connection>
+    <developerConnection>scm:git:ssh://github.com/somerandomgamer-srg/Useful-Java-Tools.git</developerConnection>
+    <url>https://github.com/somerandomgamer-srg/Useful-Java-Tools</url>
+  </scm>
+
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <plugins>
+
+      <!-- Generate sources JAR (required by Maven Central) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.3.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Generate Javadoc JAR (required by Maven Central) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.6.3</version>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!--
+        GPG signing plugin (required by Maven Central).
+        Before running `mvn deploy`, you must:
+          1. Generate a GPG key: gpg -\-gen-key
+          2. Publish the public key: gpg -\-keyserver keys.openpgp.org -\-send-keys YOUR_KEY_ID
+          3. Add your key ID and passphrase to ~/.m2/settings.xml under a <server> entry
+             with id "central" (or set the passphrase via GPG_PASSPHRASE env var).
+      -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>3.2.4</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!--
+        Sonatype Central Publishing plugin.
+        Before running `mvn deploy`, add your Sonatype credentials to ~/.m2/settings.xml:
+          <server>
+            <id>central</id>
+            <username>YOUR_SONATYPE_USERNAME</username>
+            <password>YOUR_SONATYPE_TOKEN</password>
+          </server>
+        Then run: mvn clean deploy
+        After that, log in to https://central.sonatype.com and release the staging repository.
+      -->
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>0.5.0</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>central</publishingServerId>
+          <autoPublish>false</autoPublish>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+</project>
