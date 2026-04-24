@@ -1,38 +1,65 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Create a report to help me improve!
 title: ''
-labels: ''
-assignees: ''
+labels: bug, invalid
+assignees: somerandomgamer-srg
 
 ---
 
-**Describe the bug**
+# Bug Report
+
+**Before submitting**, please check the [Discord server](https://discord.gg/w9aE98gKDs) to see if this bug has already been reported.
+
+---
+
+## Description
+
 A clear and concise description of what the bug is.
 
-**To Reproduce**
+## How to Reproduce
+
 Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+1. Call `ClassName.methodName(...)` with the following input:
+```java
+// paste your code here
+```
+2. Observe the output or exception.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+## Expected Behavior
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+What did you expect to happen?
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+## Actual Behavior
 
-**Additional context**
-Add any other context about the problem here.
+What actually happened? If an exception was thrown, paste the full stack trace here:
+
+```
+paste stack trace here
+```
+
+## Input That Triggers the Bug
+
+If applicable, provide the exact input value(s) that cause the bug:
+
+```java
+// Example:
+MathUtils.someMethod(/* your input */);
+```
+
+## Environment
+
+| Field | Value |
+|---|---|
+| UJT Version | e.g. V1.0.0 |
+| Java Version | e.g. Java 21 |
+| Operating System | e.g. Windows 11 |
+
+## Additional Notes
+
+Any other context, screenshots, or information that might help.
+
+---
+
+**To submit this report**, post it in [#bugs-suggestions-and-feedback](https://discord.com/channels/1296889247176982528/1298419569135980564) on the Discord server.
