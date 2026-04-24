@@ -98,7 +98,7 @@ import ujt.Binary;     // or import a specific class
 | Total Variables | 24 |
 | Total Methods + Variables | 260 |
 | Lines of Code | 5,162 |
-| File Size | ~154 KB |
+| File Size | ~37.6 KB (compressed to zip) |
 | Language | Java 17+ |
 | External Dependencies | None |
 
