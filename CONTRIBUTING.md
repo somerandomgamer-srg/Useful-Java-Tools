@@ -103,7 +103,7 @@ There is no formal pull request process at this time.
 
 ## License
 
-By contributing, you agree that your code will be released under the [MIT License](LICENSE.md).
+By contributing, you agree that your code will be released under the [MIT License](LICENSE).
 
 ## Further Questions
 
