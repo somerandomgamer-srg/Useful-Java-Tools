@@ -29,7 +29,7 @@ mvn clean install
 mvn exec:java -Dexec.mainClass="Test" -Dexec.classpathScope="test"
 ```
 
-All 213 tests must pass before submitting a contribution.
+ALL tests must pass before submitting a contribution.
 
 ---
 
