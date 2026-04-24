@@ -6,8 +6,9 @@
 
 ## Table of Contents
 
-- [About the Creator](#about-the-creator)
+- [Other Links](#other-links)
 - [About this Project](#about-this-project)
+- [About the Creator](#about-the-creator)
 - [Usage](#usage)
 - [Statistics](#statistics)
 - [Contact](#contact)
@@ -16,20 +17,10 @@
 
 ---
 
-## About the Creator
+## Other Links
 
-Hello, I am **SRG** (short for `Some Random Gamer`).
-
-- I have been into coding for about a year.
-- I know how to:
-	- Code with JavaScript
-	- Code with Java
-	- Code with Lua
-	- Code with Luau - a variant of Lua made specifically for Roblox
-	- Work with SQL datastores
-	- Partially code with Python *(and always willing to learn more)*
-- I originally got into coding because of my online friend **Michialok**.
-- I started in Roblox and have been self-teaching ever since.
+- [Contribution Guide](CONTRIBUTING.md)
+- [Current Methods and Variables in this library](Current%20Methods%20and%20Variables.md)
 
 ---
 
@@ -47,9 +38,26 @@ I can list so many differences here, but it might cause this file to be a millio
 
 Not that long ago, I made ULT (Useful Lua Tools). If you want to check it out, [you can check it out here!](https://github.com/somerandomgamer-srg/Useful-Lua-Tools).
 
-After moving to Java, I noticed how powerful it was, but i also noticed how much boilerplate you need for even simple things. UJT was born from the same idea as ULT: reduce that boilerplate and make common tasks simpler.    
+After moving to Java, I noticed how powerful it was, but I also noticed how much boilerplate you need for even simple things. UJT was born from the same idea as ULT: reduce that boilerplate and make common tasks simpler.    
 
 This project aims to provide a comprehensive, zero-dependency utility library for Java developers, while simplifying the coding language a little bit.
+
+---
+
+## About the Creator
+
+Hello, I am **SRG** (short for `Some Random Gamer`).
+
+- I have been into coding for about a year.
+- I know how to:
+	- Code with JavaScript
+	- Code with Java
+	- Code with Lua
+	- Code with Luau - a variant of Lua made specifically for Roblox
+	- Work with SQL datastores
+	- Partially code with Python *(and always willing to learn more)*
+- I originally got into coding because of my online friend **Michialok**.
+- I started in Roblox and have been self-teaching ever since.
 
 ---
 
