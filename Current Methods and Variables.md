@@ -300,7 +300,6 @@
     - [17.1.4 `Validate.isValidPort(int port)`](#1714-validateisvalidportint-port)
     - [17.1.5 `Validate.isValidMAC(String mac)`](#1715-validateisvalidmacstring-mac)
 # **Legend:**
-- ## **R**: Required parameter
 - ## **...**: Multiple arguments/array argument
 - ## **D**: Deprecated (method still works but may be removed in future versions)
 
@@ -373,20 +372,20 @@
 
 ### 1.2.2 `Ujt.sleep(double x)`
 - **Arguments**:
-	- `x`: **R** The amount of time to wait in seconds.
+	- `x`: The amount of time to wait in seconds.
 - **Returns**: `boolean` Whether or not the wait was successful.
 - **Description**: Waits for a specified amount of time.
 
 ### 1.2.3 `Ujt.executionTime(Runnable... methods)`
 - **Arguments**:
-	- `methods`: **R** **...** The method(s) to measure the execution time of.
+	- `methods`: **...** The method(s) to measure the execution time of.
 - **Returns**: `long` The execution time in nanoseconds.
 - **Description**: Measures the execution time of 1 or more methods.
 
 ### 1.2.4 `Ujt.executionTime(int iterations, Runnable... method)`
 - **Arguments**:
-	- `iterations`: **R** The number of iterations to run the method(s) for.
-	- `method`: **R** **...** The method(s) to measure the execution time of.
+	- `iterations`: The number of iterations to run the method(s) for.
+	- `method`: **...** The method(s) to measure the execution time of.
 - **Returns**: `long` The execution time in nanoseconds.
 - **Description**: Measures the execution time of 1 or more methods over a specified number of iterations.
 
@@ -396,43 +395,43 @@
 ## 2.1 Binary Methods
 ### 2.1.1 `Binary.toDecimal(String binary)`
 - **Arguments**:
-	- `binary`: **R** The binary string to convert to its decimal representation.
+	- `binary`: The binary string to convert to its decimal representation.
 - **Returns**: `long` The decimal representation of the binary string.
 - **Description**: Converts a binary string to its decimal representation.
 
 ### 2.1.2 `Binary.fromDecimal(long decimal)`
 - **Arguments**:
-	- `decimal`: **R** The decimal number to convert to its binary representation.
+	- `decimal`: The decimal number to convert to its binary representation.
 - **Returns**: `String` The binary representation of the decimal number.
 - **Description**: Converts a decimal number to its binary representation.
 
 ### 2.1.3 `Binary.add(String... binary)`
 - **Arguments**:
-	- `binary`: **R** **...** The binary strings to add together.
+	- `binary`: **...** The binary strings to add together.
 - **Returns**: `String` The sum of the binary strings.
 - **Description**: Adds two or more binary strings together.
 
 ### 2.1.4 `Binary.subtract(String... binary)`
 - **Arguments**:
-	- `binary`: **R** **...** The binary strings to subtract.
+	- `binary`: **...** The binary strings to subtract.
 - **Returns**: `String` The difference of the binary strings. Negative results are prefixed with a `-` sign.
 - **Description**: Subtracts two or more binary strings from one another.
 
 ### 2.1.5 `Binary.multiply(String... binary)`
 - **Arguments**:
-	- `binary`: **R** **...** The binary strings to multiply.
+	- `binary`: **...** The binary strings to multiply.
 - **Returns**: `String` The product of the binary strings.
 - **Description**: Multiplies two or more binary strings together.
 
 ### 2.1.6 `Binary.divide(String... binary)`
 - **Arguments**:
-	- `binary`: **R** **...** The binary strings to divide.
+	- `binary`: **...** The binary strings to divide.
 - **Returns**: `String` The quotient of the binary strings (integer division).
 - **Description**: Divides two or more binary strings.
 
 ### 2.1.7 `Binary.sqrt(String binary)`
 - **Arguments**:
-	- `binary`: **R** The binary string to find the square root of.
+	- `binary`: The binary string to find the square root of.
 - **Returns**: `String` The integer square root of the binary string, in binary.
 - **Description**: Returns the square root of a binary number.
 
@@ -449,7 +448,7 @@
 
 ### 3.1.2 `ClipboardUtils.write(String text)`
 - **Arguments**:
-	- `text`: **R** The text to write.
+	- `text`: The text to write.
 - **Returns**: `Void`
 - **Description**: Writes a string to the system clipboard, replacing any existing content.
 
@@ -469,120 +468,120 @@
 ## 4.1 ColorUtils Methods
 ### 4.1.1 `ColorUtils.toHex(int r, int g, int b)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
 - **Returns**: `String` The hex color string (e.g. `"#ff8800"`).
 - **Description**: Converts RGB values to a hex color string.
 
 ### 4.1.2 `ColorUtils.fromHex(String hex)`
 - **Arguments**:
-	- `hex`: **R** The hex color string. Accepts `"#rrggbb"` or `"rrggbb"`.
+	- `hex`: The hex color string. Accepts `"#rrggbb"` or `"rrggbb"`.
 - **Returns**: `int[]` An array `[r, g, b]` with values 0–255.
 - **Description**: Converts a hex color string to an RGB array.
 
 ### 4.1.3 `ColorUtils.toHsl(int r, int g, int b)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
 - **Returns**: `double[]` An array `[hue (0–360), saturation (0–1), lightness (0–1)]`.
 - **Description**: Converts RGB values to HSL.
 
 ### 4.1.4 `ColorUtils.fromHsl(double h, double s, double l)`
 - **Arguments**:
-	- `h`: **R** Hue (0–360).
-	- `s`: **R** Saturation (0–1).
-	- `l`: **R** Lightness (0–1).
+	- `h`: Hue (0–360).
+	- `s`: Saturation (0–1).
+	- `l`: Lightness (0–1).
 - **Returns**: `int[]` An array `[r, g, b]` with values 0–255.
 - **Description**: Converts HSL values to RGB.
 
 ### 4.1.5 `ColorUtils.toHsv(int r, int g, int b)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
 - **Returns**: `double[]` An array `[hue (0–360), saturation (0–1), value (0–1)]`.
 - **Description**: Converts RGB values to HSV.
 
 ### 4.1.6 `ColorUtils.fromHsv(double h, double s, double v)`
 - **Arguments**:
-	- `h`: **R** Hue (0–360).
-	- `s`: **R** Saturation (0–1).
-	- `v`: **R** Value (0–1).
+	- `h`: Hue (0–360).
+	- `s`: Saturation (0–1).
+	- `v`: Value (0–1).
 - **Returns**: `int[]` An array `[r, g, b]` with values 0–255.
 - **Description**: Converts HSV values to RGB.
 
 ### 4.1.7 `ColorUtils.blend(int r1, int g1, int b1, int r2, int g2, int b2, double ratio)`
 - **Arguments**:
-	- `r1`: **R** Red of the first color (0–255).
-	- `g1`: **R** Green of the first color (0–255).
-	- `b1`: **R** Blue of the first color (0–255).
-	- `r2`: **R** Red of the second color (0–255).
-	- `g2`: **R** Green of the second color (0–255).
-	- `b2`: **R** Blue of the second color (0–255).
-	- `ratio`: **R** How much of the first color to use (0.0 = all second, 1.0 = all first).
+	- `r1`: Red of the first color (0–255).
+	- `g1`: Green of the first color (0–255).
+	- `b1`: Blue of the first color (0–255).
+	- `r2`: Red of the second color (0–255).
+	- `g2`: Green of the second color (0–255).
+	- `b2`: Blue of the second color (0–255).
+	- `ratio`: How much of the first color to use (0.0 = all second, 1.0 = all first).
 - **Returns**: `int[]` An array `[r, g, b]` of the blended color.
 - **Description**: Blends two RGB colors together.
 
 ### 4.1.8 `ColorUtils.complementary(int r, int g, int b)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
 - **Returns**: `int[]` An array `[r, g, b]` of the complementary color.
 - **Description**: Returns the complementary color (opposite on the color wheel).
 
 ### 4.1.9 `ColorUtils.lighten(int r, int g, int b, double amount)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
-	- `amount`: **R** Amount to add to lightness (0–1).
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
+	- `amount`: Amount to add to lightness (0–1).
 - **Returns**: `int[]` An array `[r, g, b]` of the lightened color.
 - **Description**: Lightens a color by increasing its HSL lightness.
 
 ### 4.1.10 `ColorUtils.darken(int r, int g, int b, double amount)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
-	- `amount`: **R** Amount to subtract from lightness (0–1).
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
+	- `amount`: Amount to subtract from lightness (0–1).
 - **Returns**: `int[]` An array `[r, g, b]` of the darkened color.
 - **Description**: Darkens a color by decreasing its HSL lightness.
 
 ### 4.1.11 `ColorUtils.luminance(int r, int g, int b)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
 - **Returns**: `double` The relative luminance (0–1).
 - **Description**: Calculates the relative luminance of a color (WCAG definition).
 
 ### 4.1.12 `ColorUtils.isLight(int r, int g, int b)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
 - **Returns**: `boolean` `true` if the color is light.
 - **Description**: Returns whether a color is perceived as light.
 
 ### 4.1.13 `ColorUtils.isDark(int r, int g, int b)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
 - **Returns**: `boolean` `true` if the color is dark.
 - **Description**: Returns whether a color is perceived as dark.
 
 ### 4.1.14 `ColorUtils.contrastRatio(int r1, int g1, int b1, int r2, int g2, int b2)`
 - **Arguments**:
-	- `r1`: **R** Red of the first color (0–255).
-	- `g1`: **R** Green of the first color (0–255).
-	- `b1`: **R** Blue of the first color (0–255).
-	- `r2`: **R** Red of the second color (0–255).
-	- `g2`: **R** Green of the second color (0–255).
-	- `b2`: **R** Blue of the second color (0–255).
+	- `r1`: Red of the first color (0–255).
+	- `g1`: Green of the first color (0–255).
+	- `b1`: Blue of the first color (0–255).
+	- `r2`: Red of the second color (0–255).
+	- `g2`: Green of the second color (0–255).
+	- `b2`: Blue of the second color (0–255).
 - **Returns**: `double` The WCAG contrast ratio. A ratio of 4.5:1 or higher passes AA for normal text.
 - **Description**: Calculates the WCAG contrast ratio between two colors.
 
@@ -592,81 +591,81 @@
 ## 5.1 Cryptography Methods
 ### 5.1.1 `Cryptography.caesarCipherEncrypt(String message, int shift)`
 - **Arguments**:
-	- `message`: **R** The message to encrypt.
-	- `shift`: **R** The number of characters to shift by.
+	- `message`: The message to encrypt.
+	- `shift`: The number of characters to shift by.
 - **Returns**: `String` The encrypted message.
 - **Description**: Encrypts a string using the Caesar cipher.
 
 ### 5.1.2 `Cryptography.caesarCipherDecrypt(String message, int shift)`
 - **Arguments**:
-	- `message`: **R** The message to decrypt.
-	- `shift`: **R** The number of characters to shift by.
+	- `message`: The message to decrypt.
+	- `shift`: The number of characters to shift by.
 - **Returns**: `String` The decrypted message.
 - **Description**: Decrypts a string encrypted with the Caesar cipher.
 
 ### 5.1.3 `Cryptography.ror(String str, int displacement, int bits)`
 - **Arguments**:
-	- `str`: **R** The string to rotate.
-	- `displacement`: **R** The number of bits to rotate by.
-	- `bits`: **R** The bit width of each character.
+	- `str`: The string to rotate.
+	- `displacement`: The number of bits to rotate by.
+	- `bits`: The bit width of each character.
 - **Returns**: `String` The rotated string.
 - **Description**: Performs a bitwise rotate-right on each character of a string.
 
 ### 5.1.4 `Cryptography.rol(String str, int displacement, int bits)`
 - **Arguments**:
-	- `str`: **R** The string to rotate.
-	- `displacement`: **R** The number of bits to rotate by.
-	- `bits`: **R** The bit width of each character.
+	- `str`: The string to rotate.
+	- `displacement`: The number of bits to rotate by.
+	- `bits`: The bit width of each character.
 - **Returns**: `String` The rotated string.
 - **Description**: Performs a bitwise rotate-left on each character of a string.
 
 ### 5.1.5 `Cryptography.btest(int... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to bitwise AND.
+	- `numbers`: **...** The numbers to bitwise AND.
 - **Returns**: `boolean` `true` if the result of the bitwise AND is non-zero.
 - **Description**: Performs a bitwise AND on two or more numbers and returns whether the result is non-zero.
 
 ### 5.1.6 `Cryptography.luhn(long x)`
 - **Arguments**:
-	- `x`: **R** The number to validate.
+	- `x`: The number to validate.
 - **Returns**: `boolean` Whether or not the number passes the Luhn check.
 - **Description**: Performs the Luhn algorithm on a number. Commonly used to validate credit card numbers, IMEI numbers, and other identification numbers.
 
 ### 5.1.7 `Cryptography.sha256(String str)`
 - **Arguments**:
-	- `str`: **R** The string to hash.
+	- `str`: The string to hash.
 - **Returns**: `byte[]` The SHA-256 hash as a byte array.
 - **Description**: Hashes a string using SHA-256.
 
 ### 5.1.8 `Cryptography.sha256String(String str)`
 - **Arguments**:
-	- `str`: **R** The string to hash.
+	- `str`: The string to hash.
 - **Returns**: `String` The SHA-256 hash as a hexadecimal string.
 - **Description**: Hashes a string using SHA-256 and returns the result as a hex string.
 
 ### 5.1.9 `Cryptography.md5(String str)`
 > **WARNING:** MD5 is not secure and should not be used for cryptographic purposes.
 - **Arguments**:
-	- `str`: **R** The string to hash.
+	- `str`: The string to hash.
 - **Returns**: `byte[]` The MD5 hash as a byte array.
 - **Description**: Hashes a string using MD5.
 
 ### 5.1.10 `Cryptography.md5String(String str)`
 > **WARNING:** MD5 is not secure and should not be used for cryptographic purposes.
 - **Arguments**:
-	- `str`: **R** The string to hash.
+	- `str`: The string to hash.
 - **Returns**: `String` The MD5 hash as a hexadecimal string.
 - **Description**: Hashes a string using MD5 and returns the result as a hex string.
 
 ### 5.1.11 `Cryptography.sha1(String str)`
 - **Arguments**:
-	- `str`: **R** The string to hash.
+	- `str`: The string to hash.
 - **Returns**: `byte[]` The SHA-1 hash as a byte array.
 - **Description**: Hashes a string using SHA-1.
 
 ### 5.1.12 `Cryptography.sha1String(String str)`
 - **Arguments**:
-	- `str`: **R** The string to hash.
+	- `str`: The string to hash.
 - **Returns**: `String` The SHA-1 hash as a hexadecimal string.
 - **Description**: Hashes a string using SHA-1 and returns the result as a hex string.
 
@@ -676,55 +675,55 @@
 ## 6.1 Csv Methods
 ### 6.1.1 `Csv.read(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the CSV file.
+	- `path`: The path to the CSV file.
 - **Returns**: `List<String[]>` A list of rows, each row being an array of field values.
 - **Description**: Reads a CSV file and returns its rows as a list of string arrays. Handles quoted fields containing commas and newlines.
 
 ### 6.1.2 `Csv.read(String path, char delimiter)`
 - **Arguments**:
-	- `path`: **R** The path to the CSV file.
-	- `delimiter`: **R** The character used to separate fields.
+	- `path`: The path to the CSV file.
+	- `delimiter`: The character used to separate fields.
 - **Returns**: `List<String[]>` A list of rows, each row being an array of field values.
 - **Description**: Reads a CSV file with a custom delimiter and returns its rows as a list of string arrays.
 
 ### 6.1.3 `Csv.write(String path, List<String[]> data)`
 - **Arguments**:
-	- `path`: **R** The path to the CSV file.
-	- `data`: **R** The rows to write.
+	- `path`: The path to the CSV file.
+	- `data`: The rows to write.
 - **Returns**: `Void`
 - **Description**: Writes a list of rows to a CSV file using a comma delimiter, overwriting any existing content.
 
 ### 6.1.4 `Csv.write(String path, List<String[]> data, char delimiter)`
 - **Arguments**:
-	- `path`: **R** The path to the CSV file.
-	- `data`: **R** The rows to write.
-	- `delimiter`: **R** The character used to separate fields.
+	- `path`: The path to the CSV file.
+	- `data`: The rows to write.
+	- `delimiter`: The character used to separate fields.
 - **Returns**: `Void`
 - **Description**: Writes a list of rows to a CSV file with a custom delimiter, overwriting any existing content.
 
 ### 6.1.5 `Csv.parseLine(String line)`
 - **Arguments**:
-	- `line`: **R** The CSV line to parse.
+	- `line`: The CSV line to parse.
 - **Returns**: `String[]` An array of field values.
 - **Description**: Parses a single CSV line into an array of field values using a comma delimiter. Handles quoted fields containing commas.
 
 ### 6.1.6 `Csv.parseLine(String line, char delimiter)`
 - **Arguments**:
-	- `line`: **R** The CSV line to parse.
-	- `delimiter`: **R** The character used to separate fields.
+	- `line`: The CSV line to parse.
+	- `delimiter`: The character used to separate fields.
 - **Returns**: `String[]` An array of field values.
 - **Description**: Parses a single CSV line into an array of field values using a custom delimiter.
 
 ### 6.1.7 `Csv.formatLine(String[] fields)`
 - **Arguments**:
-	- `fields`: **R** The field values to format.
+	- `fields`: The field values to format.
 - **Returns**: `String` The formatted CSV line.
 - **Description**: Formats an array of field values into a single CSV line using a comma delimiter. Fields containing commas, quotes, or newlines are automatically quoted.
 
 ### 6.1.8 `Csv.formatLine(String[] fields, char delimiter)`
 - **Arguments**:
-	- `fields`: **R** The field values to format.
-	- `delimiter`: **R** The character used to separate fields.
+	- `fields`: The field values to format.
+	- `delimiter`: The character used to separate fields.
 - **Returns**: `String` The formatted CSV line.
 - **Description**: Formats an array of field values into a single CSV line using a custom delimiter. Fields containing the delimiter, quotes, or newlines are automatically quoted.
 
@@ -744,178 +743,178 @@
 
 ### 7.1.3 `DateUtils.format(LocalDate d, String pattern)`
 - **Arguments**:
-	- `d`: **R** The date to format.
-	- `pattern`: **R** The pattern to use (e.g. `"yyyy-MM-dd"`, `"MM/dd/yyyy"`).
+	- `d`: The date to format.
+	- `pattern`: The pattern to use (e.g. `"yyyy-MM-dd"`, `"MM/dd/yyyy"`).
 - **Returns**: `String` The formatted date string.
 - **Description**: Formats a `LocalDate` using the given pattern.
 
 ### 7.1.4 `DateUtils.format(LocalDateTime dt, String pattern)`
 - **Arguments**:
-	- `dt`: **R** The date-time to format.
-	- `pattern`: **R** The pattern to use (e.g. `"yyyy-MM-dd HH:mm:ss"`).
+	- `dt`: The date-time to format.
+	- `pattern`: The pattern to use (e.g. `"yyyy-MM-dd HH:mm:ss"`).
 - **Returns**: `String` The formatted date-time string.
 - **Description**: Formats a `LocalDateTime` using the given pattern.
 
 ### 7.1.5 `DateUtils.parse(String dateStr, String pattern)`
 - **Arguments**:
-	- `dateStr`: **R** The date string to parse.
-	- `pattern`: **R** The pattern to parse with (e.g. `"yyyy-MM-dd"`).
+	- `dateStr`: The date string to parse.
+	- `pattern`: The pattern to parse with (e.g. `"yyyy-MM-dd"`).
 - **Returns**: `LocalDate` The parsed date.
 - **Description**: Parses a date string into a `LocalDate` using the given pattern.
 
 ### 7.1.6 `DateUtils.parseDateTime(String dateTimeStr, String pattern)`
 - **Arguments**:
-	- `dateTimeStr`: **R** The date-time string to parse.
-	- `pattern`: **R** The pattern to parse with (e.g. `"yyyy-MM-dd HH:mm:ss"`).
+	- `dateTimeStr`: The date-time string to parse.
+	- `pattern`: The pattern to parse with (e.g. `"yyyy-MM-dd HH:mm:ss"`).
 - **Returns**: `LocalDateTime` The parsed date-time.
 - **Description**: Parses a date-time string into a `LocalDateTime` using the given pattern.
 
 ### 7.1.7 `DateUtils.daysBetween(LocalDate from, LocalDate to)`
 - **Arguments**:
-	- `from`: **R** The start date.
-	- `to`: **R** The end date.
+	- `from`: The start date.
+	- `to`: The end date.
 - **Returns**: `long` The number of days between the two dates. Negative if `from` is after `to`.
 - **Description**: Returns the number of days between two dates.
 
 ### 7.1.8 `DateUtils.monthsBetween(LocalDate from, LocalDate to)`
 - **Arguments**:
-	- `from`: **R** The start date.
-	- `to`: **R** The end date.
+	- `from`: The start date.
+	- `to`: The end date.
 - **Returns**: `long` The number of whole months between the two dates. Negative if `from` is after `to`.
 - **Description**: Returns the number of whole months between two dates.
 
 ### 7.1.9 `DateUtils.yearsBetween(LocalDate from, LocalDate to)`
 - **Arguments**:
-	- `from`: **R** The start date.
-	- `to`: **R** The end date.
+	- `from`: The start date.
+	- `to`: The end date.
 - **Returns**: `long` The number of whole years between the two dates. Negative if `from` is after `to`.
 - **Description**: Returns the number of whole years between two dates.
 
 ### 7.1.10 `DateUtils.addDays(LocalDate d, long days)`
 - **Arguments**:
-	- `d`: **R** The base date.
-	- `days`: **R** The number of days to add.
+	- `d`: The base date.
+	- `days`: The number of days to add.
 - **Returns**: `LocalDate` The resulting date.
 - **Description**: Adds a number of days to a date.
 
 ### 7.1.11 `DateUtils.addMonths(LocalDate d, long months)`
 - **Arguments**:
-	- `d`: **R** The base date.
-	- `months`: **R** The number of months to add.
+	- `d`: The base date.
+	- `months`: The number of months to add.
 - **Returns**: `LocalDate` The resulting date.
 - **Description**: Adds a number of months to a date.
 
 ### 7.1.12 `DateUtils.addYears(LocalDate d, long years)`
 - **Arguments**:
-	- `d`: **R** The base date.
-	- `years`: **R** The number of years to add.
+	- `d`: The base date.
+	- `years`: The number of years to add.
 - **Returns**: `LocalDate` The resulting date.
 - **Description**: Adds a number of years to a date.
 
 ### 7.1.13 `DateUtils.subtractDays(LocalDate d, long days)`
 - **Arguments**:
-	- `d`: **R** The base date.
-	- `days`: **R** The number of days to subtract.
+	- `d`: The base date.
+	- `days`: The number of days to subtract.
 - **Returns**: `LocalDate` The resulting date.
 - **Description**: Subtracts a number of days from a date.
 
 ### 7.1.14 `DateUtils.subtractMonths(LocalDate d, long months)`
 - **Arguments**:
-	- `d`: **R** The base date.
-	- `months`: **R** The number of months to subtract.
+	- `d`: The base date.
+	- `months`: The number of months to subtract.
 - **Returns**: `LocalDate` The resulting date.
 - **Description**: Subtracts a number of months from a date.
 
 ### 7.1.15 `DateUtils.subtractYears(LocalDate d, long years)`
 - **Arguments**:
-	- `d`: **R** The base date.
-	- `years`: **R** The number of years to subtract.
+	- `d`: The base date.
+	- `years`: The number of years to subtract.
 - **Returns**: `LocalDate` The resulting date.
 - **Description**: Subtracts a number of years from a date.
 
 ### 7.1.16 `DateUtils.isPast(LocalDate d)`
 - **Arguments**:
-	- `d`: **R** The date to check.
+	- `d`: The date to check.
 - **Returns**: `boolean` `true` if the date is before today.
 - **Description**: Checks whether a date is in the past.
 
 ### 7.1.17 `DateUtils.isFuture(LocalDate d)`
 - **Arguments**:
-	- `d`: **R** The date to check.
+	- `d`: The date to check.
 - **Returns**: `boolean` `true` if the date is after today.
 - **Description**: Checks whether a date is in the future.
 
 ### 7.1.18 `DateUtils.isToday(LocalDate d)`
 - **Arguments**:
-	- `d`: **R** The date to check.
+	- `d`: The date to check.
 - **Returns**: `boolean` `true` if the date equals today.
 - **Description**: Checks whether a date is today.
 
 ### 7.1.19 `DateUtils.isLeapYear(int year)`
 - **Arguments**:
-	- `year`: **R** The year to check.
+	- `year`: The year to check.
 - **Returns**: `boolean` `true` if the year is a leap year.
 - **Description**: Checks whether a given year is a leap year.
 
 ### 7.1.20 `DateUtils.startOfWeek(LocalDate d)`
 - **Arguments**:
-	- `d`: **R** The date to find the start of week for.
+	- `d`: The date to find the start of week for.
 - **Returns**: `LocalDate` The Monday of that week.
 - **Description**: Returns the date of the Monday of the week containing the given date.
 
 ### 7.1.21 `DateUtils.endOfWeek(LocalDate d)`
 - **Arguments**:
-	- `d`: **R** The date to find the end of week for.
+	- `d`: The date to find the end of week for.
 - **Returns**: `LocalDate` The Sunday of that week.
 - **Description**: Returns the date of the Sunday of the week containing the given date.
 
 ### 7.1.22 `DateUtils.startOfMonth(LocalDate d)`
 - **Arguments**:
-	- `d`: **R** The date to find the start of month for.
+	- `d`: The date to find the start of month for.
 - **Returns**: `LocalDate` The first day of that month.
 - **Description**: Returns the first day of the month for the given date.
 
 ### 7.1.23 `DateUtils.endOfMonth(LocalDate d)`
 - **Arguments**:
-	- `d`: **R** The date to find the end of month for.
+	- `d`: The date to find the end of month for.
 - **Returns**: `LocalDate` The last day of that month.
 - **Description**: Returns the last day of the month for the given date.
 
 ### 7.1.24 `DateUtils.dayOfWeek(LocalDate d)`
 - **Arguments**:
-	- `d`: **R** The date to get the day of week for.
+	- `d`: The date to get the day of week for.
 - **Returns**: `String` The full name of the day (e.g. `"Monday"`).
 - **Description**: Returns the full name of the day of the week for the given date.
 
 ### 7.1.25 `DateUtils.dayOfYear(LocalDate d)`
 - **Arguments**:
-	- `d`: **R** The date to get the day of year for.
+	- `d`: The date to get the day of year for.
 - **Returns**: `int` The day of the year (1–365, or 1–366 in a leap year).
 - **Description**: Returns the day of the year for the given date.
 
 ### 7.1.26 `DateUtils.weekOfYear(LocalDate d)`
 - **Arguments**:
-	- `d`: **R** The date to get the week number for.
+	- `d`: The date to get the week number for.
 - **Returns**: `int` The ISO week number (1–53).
 - **Description**: Returns the ISO week number of the year for the given date.
 
 ### 7.1.27 `DateUtils.convertTimezone(LocalDateTime dt, String fromZone, String toZone)`
 - **Arguments**:
-	- `dt`: **R** The date-time to convert.
-	- `fromZone`: **R** The source timezone ID (e.g. `"America/New_York"`).
-	- `toZone`: **R** The target timezone ID (e.g. `"Europe/London"`).
+	- `dt`: The date-time to convert.
+	- `fromZone`: The source timezone ID (e.g. `"America/New_York"`).
+	- `toZone`: The target timezone ID (e.g. `"Europe/London"`).
 - **Returns**: `LocalDateTime` The converted date-time in the target timezone.
 - **Description**: Converts a `LocalDateTime` from one timezone to another.
 
 ### 7.1.28 `DateUtils.toEpochSeconds(LocalDateTime dt)`
 - **Arguments**:
-	- `dt`: **R** The date-time to convert.
+	- `dt`: The date-time to convert.
 - **Returns**: `long` The number of seconds since 1970-01-01T00:00:00Z.
 - **Description**: Converts a `LocalDateTime` to Unix epoch seconds (UTC assumed).
 
 ### 7.1.29 `DateUtils.fromEpochSeconds(long epochSeconds)`
 - **Arguments**:
-	- `epochSeconds`: **R** The number of seconds since 1970-01-01T00:00:00Z.
+	- `epochSeconds`: The number of seconds since 1970-01-01T00:00:00Z.
 - **Returns**: `LocalDateTime` The corresponding date-time.
 - **Description**: Converts Unix epoch seconds back to a `LocalDateTime` (UTC assumed).
 
@@ -925,75 +924,75 @@
 ## 8.1 Encoding Methods
 ### 8.1.1 `Encoding.toAscii(String str)`
 - **Arguments**:
-	- `str`: **R** The string to convert.
+	- `str`: The string to convert.
 - **Returns**: `String` The ASCII code points of the string, space-separated.
 - **Description**: Converts a string to a space-separated list of ASCII code points.
 
 ### 8.1.2 `Encoding.fromAscii(String ascii)`
 - **Arguments**:
-	- `ascii`: **R** The space-separated ASCII code points to convert.
+	- `ascii`: The space-separated ASCII code points to convert.
 - **Returns**: `String` The decoded string.
 - **Description**: Converts a space-separated list of ASCII code points back to a string.
 
 ### 8.1.3 `Encoding.toHex(String str)`
 - **Arguments**:
-	- `str`: **R** The string to convert.
+	- `str`: The string to convert.
 - **Returns**: `String` The hexadecimal representation of the string, space-separated.
 - **Description**: Converts a string to a space-separated list of hexadecimal values.
 
 ### 8.1.4 `Encoding.fromHex(String hex)`
 - **Arguments**:
-	- `hex`: **R** The space-separated hexadecimal values to convert.
+	- `hex`: The space-separated hexadecimal values to convert.
 - **Returns**: `String` The decoded string.
 - **Description**: Converts a space-separated list of hexadecimal values back to a string.
 
 ### 8.1.5 `Encoding.toBinary(String str)`
 - **Arguments**:
-	- `str`: **R** The string to convert.
+	- `str`: The string to convert.
 - **Returns**: `String` The binary representation of the string (8 bits per character).
 - **Description**: Converts a string to its binary representation using 8 bits per character.
 
 ### 8.1.6 `Encoding.toBinary(String str, int bits)`
 - **Arguments**:
-	- `str`: **R** The string to convert.
-	- `bits`: **R** The number of bits to use for each character (8–32).
+	- `str`: The string to convert.
+	- `bits`: The number of bits to use for each character (8–32).
 - **Returns**: `String` The binary representation of the string.
 - **Description**: Converts a string to its binary representation using a custom bit width per character.
 
 ### 8.1.7 `Encoding.fromBinary(String binary)`
 - **Arguments**:
-	- `binary`: **R** The binary string to convert (must be a multiple of 8 bits).
+	- `binary`: The binary string to convert (must be a multiple of 8 bits).
 - **Returns**: `String` The decoded string.
 - **Description**: Converts a binary string back to a string using 8 bits per character.
 
 ### 8.1.8 `Encoding.fromBinary(String binary, int bits)`
 - **Arguments**:
-	- `binary`: **R** The binary string to convert (must be a multiple of `bits`).
-	- `bits`: **R** The number of bits used per character (8–32).
+	- `binary`: The binary string to convert (must be a multiple of `bits`).
+	- `bits`: The number of bits used per character (8–32).
 - **Returns**: `String` The decoded string.
 - **Description**: Converts a binary string back to a string using a custom bit width per character.
 
 ### 8.1.9 `Encoding.toBase64(String str)`
 - **Arguments**:
-	- `str`: **R** The string to encode.
+	- `str`: The string to encode.
 - **Returns**: `String` The Base64-encoded string.
 - **Description**: Encodes a string to Base64.
 
 ### 8.1.10 `Encoding.fromBase64(String base64)`
 - **Arguments**:
-	- `base64`: **R** The Base64 string to decode.
+	- `base64`: The Base64 string to decode.
 - **Returns**: `String` The decoded string.
 - **Description**: Decodes a Base64 string back to a plain string.
 
 ### 8.1.11 `Encoding.toBase64Url(String str)`
 - **Arguments**:
-	- `str`: **R** The string to encode.
+	- `str`: The string to encode.
 - **Returns**: `String` The URL-safe Base64-encoded string.
 - **Description**: Encodes a string to URL-safe Base64.
 
 ### 8.1.12 `Encoding.fromBase64Url(String base64)`
 - **Arguments**:
-	- `base64`: **R** The URL-safe Base64 string to decode.
+	- `base64`: The URL-safe Base64 string to decode.
 - **Returns**: `String` The decoded string.
 - **Description**: Decodes a URL-safe Base64 string back to a plain string.
 
@@ -1003,140 +1002,140 @@
 ## 9.1 FileUtils Methods
 ### 9.1.1 `FileUtils.createFile(String path, String content)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
-	- `content`: **R** The content to write to the file.
+	- `path`: The path to the file.
+	- `content`: The content to write to the file.
 - **Returns**: `boolean` Whether or not the file was created.
 - **Description**: Creates a file at the given path with the given content. Creates parent directories if needed.
 
 ### 9.1.2 `FileUtils.createFile(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
+	- `path`: The path to the file.
 - **Returns**: `boolean` Whether or not the file was created.
 - **Description**: Creates an empty file at the given path. Creates parent directories if needed.
 
 ### 9.1.3 `FileUtils.deleteFile(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
+	- `path`: The path to the file.
 - **Returns**: `boolean` Whether or not the file was deleted.
 - **Description**: Deletes the file at the given path.
 
 ### 9.1.4 `FileUtils.fileExists(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
+	- `path`: The path to the file.
 - **Returns**: `boolean` Whether or not the file exists.
 - **Description**: Checks whether a file exists at the given path.
 
 ### 9.1.5 `FileUtils.readFile(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
+	- `path`: The path to the file.
 - **Returns**: `String` The content of the file, or `null` if an error occurred.
 - **Description**: Reads the entire contents of a file into a single string.
 
 ### 9.1.6 `FileUtils.readLines(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
+	- `path`: The path to the file.
 - **Returns**: `List<String>` A list of lines from the file, or `null` if an error occurred.
 - **Description**: Reads a file line by line and returns the lines as a list of strings.
 
 ### 9.1.7 `FileUtils.writeFile(String path, String content)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
-	- `content`: **R** The content to write.
+	- `path`: The path to the file.
+	- `content`: The content to write.
 - **Returns**: `boolean` Whether or not the file was written to.
 - **Description**: Writes content to a file, overwriting any existing content.
 
 ### 9.1.8 `FileUtils.appendFile(String path, String content)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
-	- `content`: **R** The content to append.
+	- `path`: The path to the file.
+	- `content`: The content to append.
 - **Returns**: `boolean` Whether or not the content was appended.
 - **Description**: Appends content to the end of a file.
 
 ### 9.1.9 `FileUtils.renameFile(String oldPath, String newPath)`
 - **Arguments**:
-	- `oldPath`: **R** The current path of the file.
-	- `newPath`: **R** The new path for the file.
+	- `oldPath`: The current path of the file.
+	- `newPath`: The new path for the file.
 - **Returns**: `boolean` Whether or not the file was renamed.
 - **Description**: Renames or moves a file from one path to another.
 
 ### 9.1.10 `FileUtils.copyFile(String sourcePath, String destinationPath)`
 - **Arguments**:
-	- `sourcePath`: **R** The path to the file to copy.
-	- `destinationPath`: **R** The path to the destination file.
+	- `sourcePath`: The path to the file to copy.
+	- `destinationPath`: The path to the destination file.
 - **Returns**: `boolean` Whether or not the file was copied.
 - **Description**: Copies a file from one path to another, overwriting the destination if it exists.
 
 ### 9.1.11 `FileUtils.moveFile(String sourcePath, String destinationPath)`
 - **Arguments**:
-	- `sourcePath`: **R** The path to the file to move.
-	- `destinationPath`: **R** The path to the destination file.
+	- `sourcePath`: The path to the file to move.
+	- `destinationPath`: The path to the destination file.
 - **Returns**: `boolean` Whether or not the file was moved.
 - **Description**: Moves a file from one path to another, overwriting the destination if it exists.
 
 ### 9.1.12 `FileUtils.createDirectory(String path)`
 - **Arguments**:
-	- `path`: **R** The path of the directory to create.
+	- `path`: The path of the directory to create.
 - **Returns**: `boolean` Whether or not the directory was created.
 - **Description**: Creates a single directory. The parent directory must already exist.
 
 ### 9.1.13 `FileUtils.createDirectories(String path)`
 - **Arguments**:
-	- `path`: **R** The path of the directory to create.
+	- `path`: The path of the directory to create.
 - **Returns**: `boolean` Whether or not the directory was created.
 - **Description**: Creates a directory and any missing parent directories along the path.
 
 ### 9.1.14 `FileUtils.listFiles(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the directory.
+	- `path`: The path to the directory.
 - **Returns**: `String[]` An array of path strings for each entry, or `null` if an error occurred.
 - **Description**: Lists all files and subdirectories directly inside a directory (non-recursive).
 
 ### 9.1.15 `FileUtils.listFiles(String path, String extension)`
 - **Arguments**:
-	- `path`: **R** The path to the directory.
-	- `extension`: **R** The file extension to filter by (e.g. `".txt"`, `".java"`).
+	- `path`: The path to the directory.
+	- `extension`: The file extension to filter by (e.g. `".txt"`, `".java"`).
 - **Returns**: `String[]` An array of matching path strings, or `null` if an error occurred.
 - **Description**: Lists all files directly inside a directory that match a given file extension (non-recursive).
 
 ### 9.1.16 `FileUtils.fileSize(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
+	- `path`: The path to the file.
 - **Returns**: `long` The size of the file in bytes, or `-1` if an error occurred.
 - **Description**: Returns the size of a file in bytes.
 
 ### 9.1.17 `FileUtils.isDirectory(String path)`
 - **Arguments**:
-	- `path`: **R** The path to check.
+	- `path`: The path to check.
 - **Returns**: `boolean` `true` if the path is a directory.
 - **Description**: Checks whether the given path points to a directory.
 
 ### 9.1.18 `FileUtils.isFile(String path)`
 - **Arguments**:
-	- `path`: **R** The path to check.
+	- `path`: The path to check.
 - **Returns**: `boolean` `true` if the path is a regular file.
 - **Description**: Checks whether the given path points to a regular file.
 
 ### 9.1.19 `FileUtils.isDirectoryEmpty(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the directory.
+	- `path`: The path to the directory.
 - **Returns**: `boolean` `true` if the directory exists and is empty.
 - **Description**: Checks whether a directory is empty (contains no files or subdirectories).
 
 ### 9.1.20 `FileUtils.getFileExtension(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
+	- `path`: The path to the file.
 - **Returns**: `String` The extension including the dot (e.g. `".txt"`), or `""` if there is none.
 - **Description**: Returns the file extension of the given path.
 
 ### 9.1.21 `FileUtils.getFileName(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
+	- `path`: The path to the file.
 - **Returns**: `String` The full filename including its extension.
 - **Description**: Returns the filename of the given path.
 
 ### 9.1.22 `FileUtils.getFileNameWithoutExtension(String path)`
 - **Arguments**:
-	- `path`: **R** The path to the file.
+	- `path`: The path to the file.
 - **Returns**: `String` The filename without its extension.
 - **Description**: Returns the filename of the given path, without its extension.
 
@@ -1146,31 +1145,31 @@
 ## 10.1 Json Methods
 ### 10.1.1 `Json.toJson(Object value)`
 - **Arguments**:
-	- `value`: **R** The value to serialize. Supports `String`, `Number`, `Boolean`, `null`, `Map`, `List`, and arrays.
+	- `value`: The value to serialize. Supports `String`, `Number`, `Boolean`, `null`, `Map`, `List`, and arrays.
 - **Returns**: `String` The compact JSON string.
 - **Description**: Serializes a Java object to a compact JSON string.
 
 ### 10.1.2 `Json.toPrettyJson(Object value)`
 - **Arguments**:
-	- `value`: **R** The value to serialize.
+	- `value`: The value to serialize.
 - **Returns**: `String` The indented (pretty-printed) JSON string.
 - **Description**: Serializes a Java object to a pretty-printed JSON string.
 
 ### 10.1.3 `Json.parse(String jsonString)`
 - **Arguments**:
-	- `jsonString`: **R** The JSON string to parse.
+	- `jsonString`: The JSON string to parse.
 - **Returns**: `Object` A `Map` for objects, `List` for arrays, `String`, `Long`, `Double`, `Boolean`, or `null`.
 - **Description**: Parses a JSON string into a Java object.
 
 ### 10.1.4 `Json.parseObject(String jsonString)`
 - **Arguments**:
-	- `jsonString`: **R** The JSON object string.
+	- `jsonString`: The JSON object string.
 - **Returns**: `Map<String, Object>` The parsed map.
 - **Description**: Parses a JSON object string into a `Map`.
 
 ### 10.1.5 `Json.parseArray(String jsonString)`
 - **Arguments**:
-	- `jsonString`: **R** The JSON array string.
+	- `jsonString`: The JSON array string.
 - **Returns**: `List<Object>` The parsed list.
 - **Description**: Parses a JSON array string into a `List`.
 
@@ -1231,407 +1230,407 @@
 ## 12.1 MathUtils Methods
 ### 12.1.1 `MathUtils.round(double x)`
 - **Arguments**:
-	- `x`: **R** The number to round.
+	- `x`: The number to round.
 - **Returns**: `double` The rounded number (0 decimal places).
 - **Description**: Rounds a number to the nearest integer.
 
 ### 12.1.2 `MathUtils.round(double x, int precision)`
 - **Arguments**:
-	- `x`: **R** The number to round.
-	- `precision`: **R** The number of decimal places to round to.
+	- `x`: The number to round.
+	- `precision`: The number of decimal places to round to.
 - **Returns**: `double` The rounded number.
 - **Description**: Rounds a number to a specified number of decimal places.
 
 ### 12.1.3 `MathUtils.inRange(double min, double max, double x)`
 - **Arguments**:
-	- `min`: **R** The minimum value of the range.
-	- `max`: **R** The maximum value of the range.
-	- `x`: **R** The number to check.
+	- `min`: The minimum value of the range.
+	- `max`: The maximum value of the range.
+	- `x`: The number to check.
 - **Returns**: `boolean` Whether or not the number is in the range (inclusive).
 - **Description**: Checks whether a number is within a given range.
 
 ### 12.1.4 `MathUtils.average(int... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to average (at least two required).
+	- `numbers`: **...** The numbers to average (at least two required).
 - **Returns**: `int` The integer average (truncated, not rounded).
 - **Description**: Returns the average of two or more integers as an integer.
 
 ### 12.1.5 `MathUtils.average(long... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to average (at least two required).
+	- `numbers`: **...** The numbers to average (at least two required).
 - **Returns**: `long` The average.
 - **Description**: Returns the average of two or more longs.
 
 ### 12.1.6 `MathUtils.average(float... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to average (at least two required).
+	- `numbers`: **...** The numbers to average (at least two required).
 - **Returns**: `float` The average.
 - **Description**: Returns the average of two or more floats.
 
 ### 12.1.7 `MathUtils.average(double... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to average (at least two required).
+	- `numbers`: **...** The numbers to average (at least two required).
 - **Returns**: `double` The average.
 - **Description**: Returns the average of two or more doubles.
 
 ### 12.1.8 `MathUtils.median(int... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the median of (at least two required).
+	- `numbers`: **...** The numbers to find the median of (at least two required).
 - **Returns**: `double` The median.
 - **Description**: Returns the median of two or more integers.
 
 ### 12.1.9 `MathUtils.median(long... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the median of (at least two required).
+	- `numbers`: **...** The numbers to find the median of (at least two required).
 - **Returns**: `double` The median.
 - **Description**: Returns the median of two or more longs.
 
 ### 12.1.10 `MathUtils.median(float... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the median of (at least two required).
+	- `numbers`: **...** The numbers to find the median of (at least two required).
 - **Returns**: `double` The median.
 - **Description**: Returns the median of two or more floats.
 
 ### 12.1.11 `MathUtils.median(double... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the median of (at least two required).
+	- `numbers`: **...** The numbers to find the median of (at least two required).
 - **Returns**: `double` The median.
 - **Description**: Returns the median of two or more doubles.
 
 ### 12.1.12 `MathUtils.mode(int... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the mode of (at least two required).
+	- `numbers`: **...** The numbers to find the mode of (at least two required).
 - **Returns**: `int[]` The mode(s). Contains multiple values if there is a tie.
 - **Description**: Returns the mode(s) of two or more integers.
 
 ### 12.1.13 `MathUtils.mode(long... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the mode of (at least two required).
+	- `numbers`: **...** The numbers to find the mode of (at least two required).
 - **Returns**: `long[]` The mode(s).
 - **Description**: Returns the mode(s) of two or more longs.
 
 ### 12.1.14 `MathUtils.mode(float... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the mode of (at least two required).
+	- `numbers`: **...** The numbers to find the mode of (at least two required).
 - **Returns**: `float[]` The mode(s).
 - **Description**: Returns the mode(s) of two or more floats.
 
 ### 12.1.15 `MathUtils.mode(double... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the mode of (at least two required).
+	- `numbers`: **...** The numbers to find the mode of (at least two required).
 - **Returns**: `double[]` The mode(s).
 - **Description**: Returns the mode(s) of two or more doubles.
 
 ### 12.1.16 `MathUtils.range(int... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the range of (at least two required).
+	- `numbers`: **...** The numbers to find the range of (at least two required).
 - **Returns**: `int` The range (max − min).
 - **Description**: Returns the statistical range of two or more integers.
 
 ### 12.1.17 `MathUtils.range(long... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the range of (at least two required).
+	- `numbers`: **...** The numbers to find the range of (at least two required).
 - **Returns**: `long` The range.
 - **Description**: Returns the statistical range of two or more longs.
 
 ### 12.1.18 `MathUtils.range(float... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the range of (at least two required).
+	- `numbers`: **...** The numbers to find the range of (at least two required).
 - **Returns**: `float` The range.
 - **Description**: Returns the statistical range of two or more floats.
 
 ### 12.1.19 `MathUtils.range(double... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the range of (at least two required).
+	- `numbers`: **...** The numbers to find the range of (at least two required).
 - **Returns**: `double` The range.
 - **Description**: Returns the statistical range of two or more doubles.
 
 ### 12.1.20 `MathUtils.standardDeviation(int... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the standard deviation of (at least two required).
+	- `numbers`: **...** The numbers to find the standard deviation of (at least two required).
 - **Returns**: `double` The population standard deviation.
 - **Description**: Returns the standard deviation of two or more integers.
 
 ### 12.1.21 `MathUtils.standardDeviation(long... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the standard deviation of (at least two required).
+	- `numbers`: **...** The numbers to find the standard deviation of (at least two required).
 - **Returns**: `double` The population standard deviation.
 - **Description**: Returns the standard deviation of two or more longs.
 
 ### 12.1.22 `MathUtils.standardDeviation(float... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the standard deviation of (at least two required).
+	- `numbers`: **...** The numbers to find the standard deviation of (at least two required).
 - **Returns**: `double` The population standard deviation.
 - **Description**: Returns the standard deviation of two or more floats.
 
 ### 12.1.23 `MathUtils.standardDeviation(double... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the standard deviation of (at least two required).
+	- `numbers`: **...** The numbers to find the standard deviation of (at least two required).
 - **Returns**: `double` The population standard deviation.
 - **Description**: Returns the standard deviation of two or more doubles.
 
 ### 12.1.24 `MathUtils.gcd(int... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the GCD of (at least two required).
+	- `numbers`: **...** The numbers to find the GCD of (at least two required).
 - **Returns**: `int` The greatest common divisor.
 - **Description**: Returns the greatest common divisor of two or more integers.
 
 ### 12.1.25 `MathUtils.gcd(long... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the GCD of (at least two required).
+	- `numbers`: **...** The numbers to find the GCD of (at least two required).
 - **Returns**: `long` The greatest common divisor.
 - **Description**: Returns the greatest common divisor of two or more longs.
 
 ### 12.1.26 `MathUtils.isPrime(long x)`
 - **Arguments**:
-	- `x`: **R** The number to check.
+	- `x`: The number to check.
 - **Returns**: `boolean` Whether or not the number is prime.
 - **Description**: Checks whether a number is prime.
 
 ### 12.1.27 `MathUtils.lcm(int... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the LCM of (at least two required).
+	- `numbers`: **...** The numbers to find the LCM of (at least two required).
 - **Returns**: `int` The least common multiple.
 - **Description**: Returns the least common multiple of two or more integers.
 
 ### 12.1.28 `MathUtils.lcm(long... numbers)`
 - **Arguments**:
-	- `numbers`: **R** **...** The numbers to find the LCM of (at least two required).
+	- `numbers`: **...** The numbers to find the LCM of (at least two required).
 - **Returns**: `long` The least common multiple.
 - **Description**: Returns the least common multiple of two or more longs.
 
 ### 12.1.29 `MathUtils.acosh(double x)`
 - **Arguments**:
-	- `x`: **R** The number to find the inverse hyperbolic cosine of.
+	- `x`: The number to find the inverse hyperbolic cosine of.
 - **Returns**: `double` The inverse hyperbolic cosine.
 - **Description**: Returns the inverse hyperbolic cosine of a number.
 
 ### 12.1.30 `MathUtils.atanh(double x)`
 - **Arguments**:
-	- `x`: **R** The number to find the inverse hyperbolic tangent of.
+	- `x`: The number to find the inverse hyperbolic tangent of.
 - **Returns**: `double` The inverse hyperbolic tangent.
 - **Description**: Returns the inverse hyperbolic tangent of a number.
 
 ### 12.1.31 `MathUtils.asinh(double x)`
 - **Arguments**:
-	- `x`: **R** The number to find the inverse hyperbolic sine of.
+	- `x`: The number to find the inverse hyperbolic sine of.
 - **Returns**: `double` The inverse hyperbolic sine.
 - **Description**: Returns the inverse hyperbolic sine of a number.
 
 ### 12.1.32 `MathUtils.fibonacci(long nth)`
 - **Arguments**:
-	- `nth`: **R** The position in the Fibonacci sequence (1-indexed).
+	- `nth`: The position in the Fibonacci sequence (1-indexed).
 - **Returns**: `long` The nth Fibonacci number.
 - **Description**: Returns the nth number in the Fibonacci sequence. `fibonacci(1)` = 0, `fibonacci(2)` = 1.
 
 ### 12.1.33 `MathUtils.isWhole(double x)`
 - **Arguments**:
-	- `x`: **R** The number to check.
+	- `x`: The number to check.
 - **Returns**: `boolean` Whether or not the number is a whole number.
 - **Description**: Checks whether a number is a whole number (no fractional part).
 
 ### 12.1.34 `MathUtils.isOdd(long x)`
 - **Arguments**:
-	- `x`: **R** The number to check.
+	- `x`: The number to check.
 - **Returns**: `boolean` Whether or not the number is odd.
 - **Description**: Checks whether a number is odd.
 
 ### 12.1.35 `MathUtils.isEven(long x)`
 - **Arguments**:
-	- `x`: **R** The number to check.
+	- `x`: The number to check.
 - **Returns**: `boolean` Whether or not the number is even.
 - **Description**: Checks whether a number is even.
 
 ### 12.1.36 `MathUtils.isPerfectSquare(long x)`
 - **Arguments**:
-	- `x`: **R** The number to check.
+	- `x`: The number to check.
 - **Returns**: `boolean` Whether or not the number is a perfect square.
 - **Description**: Checks whether a number is a perfect square.
 
 ### 12.1.37 `MathUtils.factorial(long x)`
 - **Arguments**:
-	- `x`: **R** The number to find the factorial of (must be non-negative).
+	- `x`: The number to find the factorial of (must be non-negative).
 - **Returns**: `long` The factorial of the number.
 - **Description**: Returns the factorial of a number. Returns 1 for `x = 0`.
 
 ### 12.1.38 `MathUtils.bigFactorial(long x)`
 - **Arguments**:
-	- `x`: **R** The number to find the factorial of (must be non-negative).
+	- `x`: The number to find the factorial of (must be non-negative).
 - **Returns**: `BigInteger` The factorial of the number.
 - **Description**: Returns the factorial of a number as a `BigInteger`, supporting very large results.
 
 ### 12.1.39 `MathUtils.permutation(long x, long r)`
 - **Arguments**:
-	- `x`: **R** The total number of items.
-	- `r`: **R** The number of items to choose (must be ≤ `x`).
+	- `x`: The total number of items.
+	- `r`: The number of items to choose (must be ≤ `x`).
 - **Returns**: `long` The number of permutations.
 - **Description**: Returns the number of permutations (ordered selections) of `r` items from `x`.
 
 ### 12.1.40 `MathUtils.combination(long x, long r)`
 - **Arguments**:
-	- `x`: **R** The total number of items.
-	- `r`: **R** The number of items to choose (must be ≤ `x`).
+	- `x`: The total number of items.
+	- `r`: The number of items to choose (must be ≤ `x`).
 - **Returns**: `long` The number of combinations.
 - **Description**: Returns the number of combinations (unordered selections) of `r` items from `x`.
 
 ### 12.1.41 `MathUtils.factors(long x)`
 - **Arguments**:
-	- `x`: **R** The number to find the factors of (must be non-negative).
+	- `x`: The number to find the factors of (must be non-negative).
 - **Returns**: `long[]` An array of all factors of the number.
 - **Description**: Returns all factors of a number, including 1 and itself.
 
 ### 12.1.42 `MathUtils.isPerfect(long x)`
 - **Arguments**:
-	- `x`: **R** The number to check.
+	- `x`: The number to check.
 - **Returns**: `boolean` Whether or not the number is a perfect number.
 - **Description**: Checks whether a number is a perfect number (sum of its proper divisors equals itself).
 
 ### 12.1.43 `MathUtils.isDeficient(long x)`
 - **Arguments**:
-	- `x`: **R** The number to check.
+	- `x`: The number to check.
 - **Returns**: `boolean` Whether or not the number is a deficient number.
 - **Description**: Checks whether a number is a deficient number (sum of its proper divisors is less than itself).
 
 ### 12.1.44 `MathUtils.isAbundant(long x)`
 - **Arguments**:
-	- `x`: **R** The number to check.
+	- `x`: The number to check.
 - **Returns**: `boolean` Whether or not the number is an abundant number.
 - **Description**: Checks whether a number is an abundant number (sum of its proper divisors is greater than itself).
 
 ### 12.1.45 `MathUtils.classifyNumber(long x)`
 - **Arguments**:
-	- `x`: **R** The number to classify.
+	- `x`: The number to classify.
 - **Returns**: `String` `"Perfect"`, `"Deficient"`, or `"Abundant"`.
 - **Description**: Classifies a number as perfect, deficient, or abundant.
 
 ### 12.1.46 `MathUtils.zScore(double x, int... numbers)`
 - **Arguments**:
-	- `x`: **R** The value to find the z-score of.
-	- `numbers`: **R** **...** The dataset (at least two numbers required).
+	- `x`: The value to find the z-score of.
+	- `numbers`: **...** The dataset (at least two numbers required).
 - **Returns**: `double` The z-score.
 - **Description**: Returns the z-score of a value within an integer dataset.
 
 ### 12.1.47 `MathUtils.zScore(double x, long... numbers)`
 - **Arguments**:
-	- `x`: **R** The value to find the z-score of.
-	- `numbers`: **R** **...** The dataset (at least two numbers required).
+	- `x`: The value to find the z-score of.
+	- `numbers`: **...** The dataset (at least two numbers required).
 - **Returns**: `double` The z-score.
 - **Description**: Returns the z-score of a value within a long dataset.
 
 ### 12.1.48 `MathUtils.zScore(double x, float... numbers)`
 - **Arguments**:
-	- `x`: **R** The value to find the z-score of.
-	- `numbers`: **R** **...** The dataset (at least two numbers required).
+	- `x`: The value to find the z-score of.
+	- `numbers`: **...** The dataset (at least two numbers required).
 - **Returns**: `double` The z-score.
 - **Description**: Returns the z-score of a value within a float dataset.
 
 ### 12.1.49 `MathUtils.zScore(double x, double... numbers)`
 - **Arguments**:
-	- `x`: **R** The value to find the z-score of.
-	- `numbers`: **R** **...** The dataset (at least two numbers required).
+	- `x`: The value to find the z-score of.
+	- `numbers`: **...** The dataset (at least two numbers required).
 - **Returns**: `double` The z-score.
 - **Description**: Returns the z-score of a value within a double dataset.
 
 ### 12.1.50 `MathUtils.secant(double x)`
 - **Arguments**:
-	- `x`: **R** The angle in radians.
+	- `x`: The angle in radians.
 - **Returns**: `double` The secant of the angle.
 - **Description**: Returns the secant of an angle (1 / cos(x)).
 
 ### 12.1.51 `MathUtils.cosecant(double x)`
 - **Arguments**:
-	- `x`: **R** The angle in radians.
+	- `x`: The angle in radians.
 - **Returns**: `double` The cosecant of the angle.
 - **Description**: Returns the cosecant of an angle (1 / sin(x)).
 
 ### 12.1.52 `MathUtils.cotangent(double x)`
 - **Arguments**:
-	- `x`: **R** The angle in radians.
+	- `x`: The angle in radians.
 - **Returns**: `double` The cotangent of the angle.
 - **Description**: Returns the cotangent of an angle (1 / tan(x)).
 
 ### 12.1.53 `MathUtils.asecant(double x)`
 - **Arguments**:
-	- `x`: **R** The number to find the inverse secant of.
+	- `x`: The number to find the inverse secant of.
 - **Returns**: `double` The inverse secant in radians.
 - **Description**: Returns the inverse secant of a number (acos(1 / x)).
 
 ### 12.1.54 `MathUtils.acosecant(double x)`
 - **Arguments**:
-	- `x`: **R** The number to find the inverse cosecant of.
+	- `x`: The number to find the inverse cosecant of.
 - **Returns**: `double` The inverse cosecant in radians.
 - **Description**: Returns the inverse cosecant of a number (asin(1 / x)).
 
 ### 12.1.55 `MathUtils.acotangent(double x)`
 - **Arguments**:
-	- `x`: **R** The number to find the inverse cotangent of.
+	- `x`: The number to find the inverse cotangent of.
 - **Returns**: `double` The inverse cotangent in radians.
 - **Description**: Returns the inverse cotangent of a number (atan(1 / x)).
 
 ### 12.1.56 `MathUtils.nroot(double x, long n)`
 - **Arguments**:
-	- `x`: **R** The number to find the nth root of.
-	- `n`: **R** The root to compute.
+	- `x`: The number to find the nth root of.
+	- `n`: The root to compute.
 - **Returns**: `double` The nth root of the number.
 - **Description**: Returns the nth root of a number.
 
 ### 12.1.57 `MathUtils.mathMap(double x, double min1, double max1, double min2, double max2)`
 - **Arguments**:
-	- `x`: **R** The value to map.
-	- `min1`: **R** The minimum of the source range.
-	- `max1`: **R** The maximum of the source range.
-	- `min2`: **R** The minimum of the target range.
-	- `max2`: **R** The maximum of the target range.
+	- `x`: The value to map.
+	- `min1`: The minimum of the source range.
+	- `max1`: The maximum of the source range.
+	- `min2`: The minimum of the target range.
+	- `max2`: The maximum of the target range.
 - **Returns**: `double` The mapped value in the target range.
 - **Description**: Maps a value from one range to another (linear interpolation).
 
 ### 12.1.58 `MathUtils.distance2d(double x1, double y1, double x2, double y2)`
 - **Arguments**:
-	- `x1`: **R** The x coordinate of the first point.
-	- `y1`: **R** The y coordinate of the first point.
-	- `x2`: **R** The x coordinate of the second point.
-	- `y2`: **R** The y coordinate of the second point.
+	- `x1`: The x coordinate of the first point.
+	- `y1`: The y coordinate of the first point.
+	- `x2`: The x coordinate of the second point.
+	- `y2`: The y coordinate of the second point.
 - **Returns**: `double` The Euclidean distance between the two points.
 - **Description**: Returns the 2D distance between two points.
 
 ### 12.1.59 `MathUtils.distance3d(double x1, double y1, double z1, double x2, double y2, double z2)`
 - **Arguments**:
-	- `x1`: **R** The x coordinate of the first point.
-	- `y1`: **R** The y coordinate of the first point.
-	- `z1`: **R** The z coordinate of the first point.
-	- `x2`: **R** The x coordinate of the second point.
-	- `y2`: **R** The y coordinate of the second point.
-	- `z2`: **R** The z coordinate of the second point.
+	- `x1`: The x coordinate of the first point.
+	- `y1`: The y coordinate of the first point.
+	- `z1`: The z coordinate of the first point.
+	- `x2`: The x coordinate of the second point.
+	- `y2`: The y coordinate of the second point.
+	- `z2`: The z coordinate of the second point.
 - **Returns**: `double` The Euclidean distance between the two points.
 - **Description**: Returns the 3D distance between two points.
 
 ### 12.1.60 `MathUtils.aos(double a, double b)`
 - **Arguments**:
-	- `a`: **R** The coefficient of the quadratic term.
-	- `b`: **R** The coefficient of the linear term.
+	- `a`: The coefficient of the quadratic term.
+	- `b`: The coefficient of the linear term.
 - **Returns**: `double` The axis of symmetry.
 - **Description**: Returns the axis of symmetry of a quadratic equation (−b / 2a).
 
 ### 12.1.61 `MathUtils.vertex(double a, double b, double c)`
 - **Arguments**:
-	- `a`: **R** The coefficient of the quadratic term.
-	- `b`: **R** The coefficient of the linear term.
-	- `c`: **R** The constant term.
+	- `a`: The coefficient of the quadratic term.
+	- `b`: The coefficient of the linear term.
+	- `c`: The constant term.
 - **Returns**: `Map<String, Double>` A map with keys `"x"` and `"y"` representing the vertex coordinates.
 - **Description**: Returns the vertex of a quadratic equation.
 
 ### 12.1.62 `MathUtils.clamp(double value, double min, double max)`
 - **Arguments**:
-	- `value`: **R** The value to clamp.
-	- `min`: **R** The minimum allowed value.
-	- `max`: **R** The maximum allowed value.
+	- `value`: The value to clamp.
+	- `min`: The minimum allowed value.
+	- `max`: The maximum allowed value.
 - **Returns**: `double` The clamped value.
 - **Description**: Clamps a value so it stays within the given range.
 
 ### 12.1.63 `MathUtils.log(double x, double base)`
 - **Arguments**:
-	- `x`: **R** The number to take the logarithm of.
-	- `base`: **R** The base of the logarithm.
+	- `x`: The number to take the logarithm of.
+	- `base`: The base of the logarithm.
 - **Returns**: `double` The logarithm of `x` in the given base.
 - **Description**: Returns the logarithm of a number in a specified base.
 
@@ -1646,37 +1645,37 @@
 ## 13.2 RandomUtils Methods
 ### 13.2.1 `RandomUtils.randomInt(int min, int max)`
 - **Arguments**:
-	- `min`: **R** The minimum integer value (inclusive).
-	- `max`: **R** The maximum integer value (inclusive).
+	- `min`: The minimum integer value (inclusive).
+	- `max`: The maximum integer value (inclusive).
 - **Returns**: `int` A random integer between min and max.
 - **Description**: Returns a random integer in the given range.
 
 ### 13.2.2 `RandomUtils.randomDouble(double min, double max, int decimals)`
 - **Arguments**:
-	- `min`: **R** The minimum value (inclusive).
-	- `max`: **R** The maximum value (inclusive).
-	- `decimals`: **R** The number of decimal places.
+	- `min`: The minimum value (inclusive).
+	- `max`: The maximum value (inclusive).
+	- `decimals`: The number of decimal places.
 - **Returns**: `double` A random double in the given range.
 - **Description**: Returns a random double in the given range, rounded to a specified number of decimal places.
 
 ### 13.2.3 `RandomUtils.randomLong(long min, long max)`
 - **Arguments**:
-	- `min`: **R** The minimum value (inclusive).
-	- `max`: **R** The maximum value (inclusive).
+	- `min`: The minimum value (inclusive).
+	- `max`: The maximum value (inclusive).
 - **Returns**: `long` A random long in the given range.
 - **Description**: Returns a random long in the given range.
 
 ### 13.2.4 `RandomUtils.randomFloat(float min, float max, int decimals)`
 - **Arguments**:
-	- `min`: **R** The minimum value (inclusive).
-	- `max`: **R** The maximum value (inclusive).
-	- `decimals`: **R** The number of decimal places.
+	- `min`: The minimum value (inclusive).
+	- `max`: The maximum value (inclusive).
+	- `decimals`: The number of decimal places.
 - **Returns**: `float` A random float in the given range.
 - **Description**: Returns a random float in the given range, rounded to a specified number of decimal places.
 
 ### 13.2.5 `RandomUtils.randomHex(int length)`
 - **Arguments**:
-	- `length`: **R** The length of the hex string.
+	- `length`: The length of the hex string.
 - **Returns**: `String` A random hexadecimal string.
 - **Description**: Returns a random hexadecimal string of the given length.
 
@@ -1687,16 +1686,16 @@
 
 ### 13.2.7 `RandomUtils.randomBoolean(double truePossibility, double falsePossibility)`
 - **Arguments**:
-	- `truePossibility`: **R** The percentage chance of returning `true` (must sum to 100 with `falsePossibility`).
-	- `falsePossibility`: **R** The percentage chance of returning `false`.
+	- `truePossibility`: The percentage chance of returning `true` (must sum to 100 with `falsePossibility`).
+	- `falsePossibility`: The percentage chance of returning `false`.
 - **Returns**: `boolean` A random boolean weighted by the given percentages.
 - **Description**: Returns a random boolean using weighted probabilities.
 
 ### 13.2.8 `RandomUtils.randomSign(double x, double negativePossibility, double positivePossibility)`
 - **Arguments**:
-	- `x`: **R** The number to randomize the sign of.
-	- `negativePossibility`: **R** The percentage chance of returning a negative value (must sum to 100 with `positivePossibility`).
-	- `positivePossibility`: **R** The percentage chance of returning a positive value.
+	- `x`: The number to randomize the sign of.
+	- `negativePossibility`: The percentage chance of returning a negative value (must sum to 100 with `positivePossibility`).
+	- `positivePossibility`: The percentage chance of returning a positive value.
 - **Returns**: `double` The number with a randomly chosen sign.
 - **Description**: Returns the given number with a randomly chosen sign based on weighted probabilities.
 
@@ -1706,79 +1705,79 @@
 ## 14.1 StringUtils Methods
 ### 14.1.1 `StringUtils.capitalize(String s)`
 - **Arguments**:
-	- `s`: **R** The string to capitalize.
+	- `s`: The string to capitalize.
 - **Returns**: `String` The string with its first character uppercased.
 - **Description**: Capitalizes the first character of a string.
 
 ### 14.1.2 `StringUtils.reverse(String s)`
 - **Arguments**:
-	- `s`: **R** The string to reverse.
+	- `s`: The string to reverse.
 - **Returns**: `String` The reversed string, or `null` if `s` is `null`.
 - **Description**: Reverses a string.
 
 ### 14.1.3 `StringUtils.count(String s, String strToCheck)`
 - **Arguments**:
-	- `s`: **R** The string to search in.
-	- `strToCheck`: **R** The substring to count occurrences of.
+	- `s`: The string to search in.
+	- `strToCheck`: The substring to count occurrences of.
 - **Returns**: `long` The number of non-overlapping occurrences of `strToCheck` in `s`.
 - **Description**: Counts the number of times a substring appears in a string.
 
 ### 14.1.4 `StringUtils.wrap(String str, int length)`
 - **Arguments**:
-	- `str`: **R** The string to wrap.
-	- `length`: **R** The maximum number of characters per line.
+	- `str`: The string to wrap.
+	- `length`: The maximum number of characters per line.
 - **Returns**: `String` The word-wrapped string.
 - **Description**: Wraps a string to a specified line length by inserting newlines between words.
 
 ### 14.1.5 `StringUtils.mask(String str, String maskChar, int startCharactersVisible, int endCharactersVisible)`
 - **Arguments**:
-	- `str`: **R** The string to mask.
-	- `maskChar`: **R** The character(s) to use for masking.
-	- `startCharactersVisible`: **R** The number of characters to leave visible at the start.
-	- `endCharactersVisible`: **R** The number of characters to leave visible at the end.
+	- `str`: The string to mask.
+	- `maskChar`: The character(s) to use for masking.
+	- `startCharactersVisible`: The number of characters to leave visible at the start.
+	- `endCharactersVisible`: The number of characters to leave visible at the end.
 - **Returns**: `String` The masked string.
 - **Description**: Masks a string, leaving a specified number of characters visible at each end.
 
 ### 14.1.6 `StringUtils.pad(String str, String character, int length, boolean includeStart, boolean includeEnd)`
 - **Arguments**:
-	- `str`: **R** The string to pad.
-	- `character`: **R** The character(s) to pad with.
-	- `length`: **R** The number of padding characters to add on each side.
-	- `includeStart`: **R** Whether to pad the start of the string.
-	- `includeEnd`: **R** Whether to pad the end of the string.
+	- `str`: The string to pad.
+	- `character`: The character(s) to pad with.
+	- `length`: The number of padding characters to add on each side.
+	- `includeStart`: Whether to pad the start of the string.
+	- `includeEnd`: Whether to pad the end of the string.
 - **Returns**: `String` The padded string.
 - **Description**: Pads a string with a specified character on either or both sides.
 
 ### 14.1.7 `StringUtils.isPalindrome(String str)`
 - **Arguments**:
-	- `str`: **R** The string to check.
+	- `str`: The string to check.
 - **Returns**: `boolean` Whether or not the string is a palindrome (case-insensitive).
 - **Description**: Checks whether a string is a palindrome (case-insensitive).
 
 ### 14.1.8 `StringUtils.isPalindrome(String str, boolean caseSensitive)`
 - **Arguments**:
-	- `str`: **R** The string to check.
-	- `caseSensitive`: **R** Whether the check should be case-sensitive.
+	- `str`: The string to check.
+	- `caseSensitive`: Whether the check should be case-sensitive.
 - **Returns**: `boolean` Whether or not the string is a palindrome.
 - **Description**: Checks whether a string is a palindrome with optional case sensitivity.
 
 ### 14.1.9 `StringUtils.levenshtein(String s1, String s2)`
 - **Arguments**:
-	- `s1`: **R** The first string.
-	- `s2`: **R** The second string.
+	- `s1`: The first string.
+	- `s2`: The second string.
 - **Returns**: `long` The Levenshtein (edit) distance between the two strings.
 - **Description**: Returns the Levenshtein distance between two strings — the minimum number of single-character edits needed to transform one string into the other.
 
 ### 14.1.10 `StringUtils.titleCase(String str)`
 - **Arguments**:
-	- `str`: **R** The string to convert.
+	- `str`: The string to convert.
 - **Returns**: `String` The string in Title Case.
 - **Description**: Converts a string to Title Case, splitting on whitespace.
 
 ### 14.1.11 `StringUtils.titleCase(String str, String sep)`
 - **Arguments**:
-	- `str`: **R** The string to convert.
-	- `sep`: **R** The separator used to detect word boundaries.
+	- `str`: The string to convert.
+	- `sep`: The separator used to detect word boundaries.
 - **Returns**: `String` The string in Title Case.
 - **Description**: Converts a string to Title Case using a custom separator.
 
@@ -1845,188 +1844,188 @@
 ## 16.2 Terminal Methods
 ### 16.2.1 `Terminal.color(int r, int g, int b, String s)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
-	- `s`: **R** The string to color.
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
+	- `s`: The string to color.
 - **Returns**: `String` The ANSI-colored string.
 - **Description**: Returns a string wrapped in ANSI RGB color codes, ready for printing.
 
 ### 16.2.2 `Terminal.color(int r, int g, int b, int i)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
-	- `i`: **R** The integer to color.
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
+	- `i`: The integer to color.
 - **Returns**: `String` The ANSI-colored string.
 - **Description**: Returns an integer as an ANSI-colored string.
 
 ### 16.2.3 `Terminal.color(int r, int g, int b, double d)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
-	- `d`: **R** The double to color.
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
+	- `d`: The double to color.
 - **Returns**: `String` The ANSI-colored string.
 - **Description**: Returns a double as an ANSI-colored string.
 
 ### 16.2.4 `Terminal.color(int r, int g, int b, long l)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
-	- `l`: **R** The long to color.
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
+	- `l`: The long to color.
 - **Returns**: `String` The ANSI-colored string.
 - **Description**: Returns a long as an ANSI-colored string.
 
 ### 16.2.5 `Terminal.color(int r, int g, int b, float f)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
-	- `f`: **R** The float to color.
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
+	- `f`: The float to color.
 - **Returns**: `String` The ANSI-colored string.
 - **Description**: Returns a float as an ANSI-colored string.
 
 ### 16.2.6 `Terminal.color(int r, int g, int b, boolean bool)`
 - **Arguments**:
-	- `r`: **R** Red value (0–255).
-	- `g`: **R** Green value (0–255).
-	- `b`: **R** Blue value (0–255).
-	- `bool`: **R** The boolean to color.
+	- `r`: Red value (0–255).
+	- `g`: Green value (0–255).
+	- `b`: Blue value (0–255).
+	- `bool`: The boolean to color.
 - **Returns**: `String` The ANSI-colored string.
 - **Description**: Returns a boolean as an ANSI-colored string.
 
 ### 16.2.7 `Terminal.strInput(String prompt)`
 - **Arguments**:
-	- `prompt`: **R** The prompt to display to the user.
+	- `prompt`: The prompt to display to the user.
 - **Returns**: `String` The string entered by the user.
 - **Description**: Prompts the user to enter a string and returns the input.
 
 ### 16.2.8 `Terminal.strInput(String prompt, String errorMessage)`
 - **Arguments**:
-	- `prompt`: **R** The prompt to display to the user.
-	- `errorMessage`: **R** The error message to display on failure. Use `{e}` as a placeholder for the exception.
+	- `prompt`: The prompt to display to the user.
+	- `errorMessage`: The error message to display on failure. Use `{e}` as a placeholder for the exception.
 - **Returns**: `String` The string entered by the user.
 - **Description**: Prompts the user to enter a string and returns the input, using a custom error message on failure.
 
 ### 16.2.9 `Terminal.intInput(String prompt)`
 - **Arguments**:
-	- `prompt`: **R** The prompt to display to the user.
+	- `prompt`: The prompt to display to the user.
 - **Returns**: `int` The integer entered by the user.
 - **Description**: Prompts the user to enter an integer and returns the input. Loops until valid input is given.
 
 ### 16.2.10 `Terminal.intInput(String prompt, String errorMessage)`
 - **Arguments**:
-	- `prompt`: **R** The prompt to display to the user.
-	- `errorMessage`: **R** The error message to display on invalid input. Use `{e}` as a placeholder for the exception.
+	- `prompt`: The prompt to display to the user.
+	- `errorMessage`: The error message to display on invalid input. Use `{e}` as a placeholder for the exception.
 - **Returns**: `int` The integer entered by the user.
 - **Description**: Prompts the user to enter an integer with a custom error message. Loops until valid input is given.
 
 ### 16.2.11 `Terminal.dubInput(String prompt)`
 - **Arguments**:
-	- `prompt`: **R** The prompt to display to the user.
+	- `prompt`: The prompt to display to the user.
 - **Returns**: `double` The double entered by the user.
 - **Description**: Prompts the user to enter a double and returns the input. Loops until valid input is given.
 
 ### 16.2.12 `Terminal.dubInput(String prompt, String errorMessage)`
 - **Arguments**:
-	- `prompt`: **R** The prompt to display to the user.
-	- `errorMessage`: **R** The error message to display on invalid input. Use `{e}` as a placeholder for the exception.
+	- `prompt`: The prompt to display to the user.
+	- `errorMessage`: The error message to display on invalid input. Use `{e}` as a placeholder for the exception.
 - **Returns**: `double` The double entered by the user.
 - **Description**: Prompts the user to enter a double with a custom error message. Loops until valid input is given.
 
 ### 16.2.13 `Terminal.longInput(String prompt)`
 - **Arguments**:
-	- `prompt`: **R** The prompt to display to the user.
+	- `prompt`: The prompt to display to the user.
 - **Returns**: `long` The long entered by the user.
 - **Description**: Prompts the user to enter a long and returns the input. Loops until valid input is given.
 
 ### 16.2.14 `Terminal.longInput(String prompt, String errorMessage)`
 - **Arguments**:
-	- `prompt`: **R** The prompt to display to the user.
-	- `errorMessage`: **R** The error message to display on invalid input. Use `{e}` as a placeholder for the exception.
+	- `prompt`: The prompt to display to the user.
+	- `errorMessage`: The error message to display on invalid input. Use `{e}` as a placeholder for the exception.
 - **Returns**: `long` The long entered by the user.
 - **Description**: Prompts the user to enter a long with a custom error message. Loops until valid input is given.
 
 ### 16.2.15 `Terminal.floatInput(String prompt)`
 - **Arguments**:
-	- `prompt`: **R** The prompt to display to the user.
+	- `prompt`: The prompt to display to the user.
 - **Returns**: `float` The float entered by the user.
 - **Description**: Prompts the user to enter a float and returns the input. Loops until valid input is given.
 
 ### 16.2.16 `Terminal.floatInput(String prompt, String errorMessage)`
 - **Arguments**:
-	- `prompt`: **R** The prompt to display to the user.
-	- `errorMessage`: **R** The error message to display on invalid input. Use `{e}` as a placeholder for the exception.
+	- `prompt`: The prompt to display to the user.
+	- `errorMessage`: The error message to display on invalid input. Use `{e}` as a placeholder for the exception.
 - **Returns**: `float` The float entered by the user.
 - **Description**: Prompts the user to enter a float with a custom error message. Loops until valid input is given.
 
 ### 16.2.17 `Terminal.loopVerifyRange(double min, double max, String prompt)`
 - **Arguments**:
-	- `min`: **R** The minimum double value the user can enter.
-	- `max`: **R** The maximum double value the user can enter.
-	- `prompt`: **R** The prompt to display to the user.
+	- `min`: The minimum double value the user can enter.
+	- `max`: The maximum double value the user can enter.
+	- `prompt`: The prompt to display to the user.
 - **Returns**: `double` The double entered by the user.
 - **Description**: Prompts the user to enter a double and loops until the entered value is within the given range.
 
 ### 16.2.18 `Terminal.loopVerifyRange(int min, int max, String prompt)`
 - **Arguments**:
-	- `min`: **R** The minimum integer value the user can enter.
-	- `max`: **R** The maximum integer value the user can enter.
-	- `prompt`: **R** The prompt to display to the user.
+	- `min`: The minimum integer value the user can enter.
+	- `max`: The maximum integer value the user can enter.
+	- `prompt`: The prompt to display to the user.
 - **Returns**: `int` The integer entered by the user.
 - **Description**: Prompts the user to enter an integer and loops until the entered value is within the given range.
 
 ### 16.2.19 `Terminal.loopVerifyRange(long min, long max, String prompt)`
 - **Arguments**:
-	- `min`: **R** The minimum long value the user can enter.
-	- `max`: **R** The maximum long value the user can enter.
-	- `prompt`: **R** The prompt to display to the user.
+	- `min`: The minimum long value the user can enter.
+	- `max`: The maximum long value the user can enter.
+	- `prompt`: The prompt to display to the user.
 - **Returns**: `long` The long entered by the user.
 - **Description**: Prompts the user to enter a long and loops until the entered value is within the given range.
 
 ### 16.2.20 `Terminal.loopVerifyRange(float min, float max, String prompt)`
 - **Arguments**:
-	- `min`: **R** The minimum float value the user can enter.
-	- `max`: **R** The maximum float value the user can enter.
-	- `prompt`: **R** The prompt to display to the user.
+	- `min`: The minimum float value the user can enter.
+	- `max`: The maximum float value the user can enter.
+	- `prompt`: The prompt to display to the user.
 - **Returns**: `float` The float entered by the user.
 - **Description**: Prompts the user to enter a float and loops until the entered value is within the given range.
 
 ### 16.2.21 `Terminal.loopVerifyBool(String prompt)`
 - **Arguments**:
-	- `prompt`: **R** The prompt to display to the user.
+	- `prompt`: The prompt to display to the user.
 - **Returns**: `boolean` `true` if the user types `"y"`, `false` if the user types `"n"`.
 - **Description**: Prompts the user to enter `"y"` or `"n"` and loops until a valid answer is given.
 
 ### 16.2.22 `Terminal.loopVerifyString(String option1, String option2, String prompt)`
 - **Arguments**:
-	- `option1`: **R** The first valid option.
-	- `option2`: **R** The second valid option.
-	- `prompt`: **R** The prompt to display to the user.
+	- `option1`: The first valid option.
+	- `option2`: The second valid option.
+	- `prompt`: The prompt to display to the user.
 - **Returns**: `String` The option entered by the user.
 - **Description**: Prompts the user to choose between two string options and loops until a valid option is entered.
 
 ### 16.2.23 `Terminal.loopVerifyStringRange(double min, double max, String s)`
 - **Arguments**:
-	- `min`: **R** The minimum allowed string length.
-	- `max`: **R** The maximum allowed string length.
-	- `s`: **R** The prompt to display to the user.
+	- `min`: The minimum allowed string length.
+	- `max`: The maximum allowed string length.
+	- `s`: The prompt to display to the user.
 - **Returns**: `String` The string entered by the user.
 - **Description**: Prompts the user to enter a string and loops until its length is within the given range.
 
 ### 16.2.24 `Terminal.terminalStyle(String str, String[] options)`
 - **Arguments**:
-	- `str`: **R** The string to style.
-	- `options`: **R** An array of style names to apply (see `Terminal.terminalStyles` for valid names).
+	- `str`: The string to style.
+	- `options`: An array of style names to apply (see `Terminal.terminalStyles` for valid names).
 - **Returns**: `String` The ANSI-styled string.
 - **Description**: Applies one or more ANSI styles to a string.
 
 ### 16.2.25 `Terminal.terminalStyle(String str, String style)`
 - **Arguments**:
-	- `str`: **R** The string to style.
-	- `style`: **R** The style name to apply (see `Terminal.terminalStyles` for valid names).
+	- `str`: The string to style.
+	- `style`: The style name to apply (see `Terminal.terminalStyles` for valid names).
 - **Returns**: `String` The ANSI-styled string.
 - **Description**: Applies a single ANSI style to a string.
 
@@ -2041,30 +2040,30 @@
 ## 17.1 Validate Methods
 ### 17.1.1 `Validate.isValidEmail(String email)`
 - **Arguments**:
-	- `email`: **R** The email address to validate.
+	- `email`: The email address to validate.
 - **Returns**: `boolean` Whether or not the email matches a valid email format.
 - **Description**: Validates an email address using a regex pattern.
 
 ### 17.1.2 `Validate.isValidURL(String url)`
 - **Arguments**:
-	- `url`: **R** The URL to validate.
+	- `url`: The URL to validate.
 - **Returns**: `boolean` Whether or not the URL is valid.
 - **Description**: Validates a URL by attempting to parse it.
 
 ### 17.1.3 `Validate.isValidIP(String ip)`
 - **Arguments**:
-	- `ip`: **R** The IP address to validate.
+	- `ip`: The IP address to validate.
 - **Returns**: `boolean` Whether or not the IP is a valid IPv4 or IPv6 address.
 - **Description**: Validates an IPv4 or IPv6 address using regex pattern matching (no DNS lookup).
 
 ### 17.1.4 `Validate.isValidPort(int port)`
 - **Arguments**:
-	- `port`: **R** The port number to validate.
+	- `port`: The port number to validate.
 - **Returns**: `boolean` Whether or not the port is in the valid range (0–65535).
 - **Description**: Validates a port number.
 
 ### 17.1.5 `Validate.isValidMAC(String mac)`
 - **Arguments**:
-	- `mac`: **R** The MAC address to validate.
+	- `mac`: The MAC address to validate.
 - **Returns**: `boolean` Whether or not the MAC address matches a valid format.
 - **Description**: Validates a MAC address using a regex pattern. Accepts both `:` and `-` as separators.
