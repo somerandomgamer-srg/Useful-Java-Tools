@@ -8,9 +8,12 @@
 
 - [Other Links](#other-links)
 - [About this Project](#about-this-project)
+- [But Why UJT](#but-why-ujt)
 - [About the Creator](#about-the-creator)
+- [Requirements](#requirements)
 - [Usage](#usage)
 - [Statistics](#statistics)
+- [Roadmap](#roadmap)
 - [Contact](#contact)
 - [License](#license)
 - [Disclaimers](#disclaimers)
@@ -44,6 +47,18 @@ This project aims to provide a comprehensive, zero-dependency utility library fo
 
 ---
 
+## But Why UJT
+
+There are many reasons on why UJT should be chosen over other libraries.
+- UJT only uses the standard Java libraries, meaning you won't have to have multiple dependencies for just one application.
+- UJT doesn't just provide one class, it provides a whole toolkit, so much so that you won't even need to choose another library.
+- UJT isn't going to stay the same. You can get more features over-time!
+- UJT reduces boilerplate so your program doesn't get so cluttered. For example, instead of having to manually type the ASCII escape sequences everytime you want text in the terminal to be styled, you just use one very condensed, easy to use method!
+- UJT requires no special setup, just Java 17+ and Maven
+- UJT was made by someone who actually *cares* for their users. If you have a question or want to see something added, you can contact the creator!
+
+---
+
 ## About the Creator
 
 Hello, I am **SRG** (short for `Some Random Gamer`).
@@ -58,6 +73,13 @@ Hello, I am **SRG** (short for `Some Random Gamer`).
 	- Partially code with Python *(and always willing to learn more)*
 - I originally got into coding because of my online friend **Michialok**.
 - I started in Roblox and have been self-teaching ever since.
+
+---
+
+## Requirements
+- Java 17 or higher
+- Maven (for building/installing)
+- No other requirements? Wow!
 
 ---
 
@@ -84,6 +106,42 @@ import ujt.Binary;     // or import a specific class
 ```
 
 **4. Start using the methods in your application.**
+```java
+import ujt.MathUtils;
+import ujt.StringUtils;
+import ujt.DateUtils;
+import ujt.Terminal;
+
+public static class exampleClass {
+	public static void test() {
+		// MathUtils — check if a number is prime
+		MathUtils.isPrime(17); // true
+		MathUtils.isPrime(10); // false
+
+		// MathUtils — get the nth Fibonacci number
+		MathUtils.fibonacci(10); // 34
+		MathUtils.fibonacci(7); // 8 (note: fibonacci(2) returns 1, fibonacci(1) returns 0)
+
+		// StringUtils — palindrome check (case-insensitive by default)
+		StringUtils.isPalindrome("racecar"); // true
+		StringUtils.isPalindrome("Racecar", false); // true
+		StringUtils.isPalindrome("Racecar", true); // false
+
+		// StringUtils — convert to title case
+		StringUtils.titleCase("hello world"); // "Hello World"
+
+		// DateUtils — days between two dates
+		DateUtils.daysBetween(
+			LocalDate.of(2026, 1, 1),
+			LocalDate.of(2026, 12, 31)
+		); // 364
+
+		// Terminal — print colored text using RGB values
+		System.out.println(Terminal.color(255, 100, 0, "Hello!")); // prints "Hello!" in orange
+		System.out.println(Terminal.color(0, 200, 100, "Success!")); // prints "Success!" in green
+	}
+}
+```
 
 ---
 
@@ -98,7 +156,7 @@ import ujt.Binary;     // or import a specific class
 | Total Variables | 24 |
 | Total Methods + Variables | 260 |
 | Lines of Code | 5,162 |
-| File Size | ~37.6 KB (compressed to zip) |
+| File Size | ~154 KB |
 | Language | Java 17+ |
 | External Dependencies | None |
 
@@ -136,6 +194,15 @@ import ujt.Binary;     // or import a specific class
 |     Jvm      |     4     |
 |   Terminal   |     1     |
 | RandomUtils  |     1     |
+
+---
+
+## What to Expect in the Future
+- `ZipUtils` class
+- `NetworkUtils` class
+- `HttpUtils` class
+- `RegexUtils` class
+- `CollectionUtils` class
 
 ---
 
