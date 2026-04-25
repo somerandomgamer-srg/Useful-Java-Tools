@@ -13,7 +13,7 @@
 - [Requirements](#requirements)
 - [Usage](#usage)
 - [Statistics](#statistics)
-- [Roadmap](#what-to-expect-in-the-future)
+- [What to Expect in the Future](#what-to-expect-in-the-future)
 - [Contact](#contact)
 - [License](#license)
 - [Disclaimers](#disclaimers)
