@@ -97,8 +97,6 @@ Contributions are accepted via **Discord DM to SRG**. [Join the server](https://
 3. Your code (as a patch, branch link, or file)
 4. What you would like to be displayed as in the `Ujt.ujtContributors` array.
 
-There is no formal pull request process at this time.
-
 ---
 
 ## License
